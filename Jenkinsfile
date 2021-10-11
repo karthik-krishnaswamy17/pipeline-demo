@@ -21,7 +21,7 @@ pipeline{
 		stage("DEPLOY"){
 			when{
 				expression{
-				 BRANCH_NAME=='PROD'
+				 BRANCH_NAME=='PROD' || BRANCH_NAME=='master'
 				}
 			}
 			steps{
